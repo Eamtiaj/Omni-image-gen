@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omni Image Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to Omni Image Generator!</h1>
-  <p>More features coming soon...</p>
+  <div class="container">
+    <h1>Omni Image Generator</h1>
+    <input type="text" id="prompt" placeholder="Enter your image prompt..." />
+    <div class="buttons">
+      <button onclick="generateImage('Leonardo')">Leonardo AI</button>
+      <button onclick="generateImage('Playground')">Playground AI</button>
+      <button onclick="generateImage('BlueWillow')">BlueWillow</button>
+      <button onclick="generateImage('Bing')">Bing AI</button>
+    </div>
+    <div class="results" id="results">
+      <p>Generated images will appear here.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
