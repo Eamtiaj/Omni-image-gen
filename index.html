@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Omni Image Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Omni Image Generator</h1>
-    <input type="text" id="prompt" placeholder="Enter your image prompt..." />
-    <div class="buttons">
-      <button onclick="generateImage('Leonardo')">Leonardo AI</button>
-      <button onclick="generateImage('Playground')">Playground AI</button>
-      <button onclick="generateImage('BlueWillow')">BlueWillow</button>
-      <button onclick="generateImage('Bing')">Bing AI</button>
+  <div class="main-container">
+    <h1 class="title">Omni Image Generator</h1>
+    <div class="search-area">
+      <input type="text" id="prompt" placeholder="Enter your image prompt here..." />
+      <button onclick="generateImage()">🎨 Generate</button>
     </div>
+
+    <div class="tool-grid">
+      <div class="tool-card" onclick="selectTool('Leonardo')">🧠 Leonardo AI</div>
+      <div class="tool-card" onclick="selectTool('Playground')">🎮 Playground AI</div>
+      <div class="tool-card" onclick="selectTool('BlueWillow')">🌌 BlueWillow</div>
+      <div class="tool-card" onclick="selectTool('Bing')">🔍 Bing AI</div>
+    </div>
+
     <div class="results" id="results">
-      <p>Generated images will appear here.</p>
+      <p>Select a tool and enter a prompt to generate an image.</p>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
