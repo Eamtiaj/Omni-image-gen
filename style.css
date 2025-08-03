@@ -1,41 +1,80 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
+  background: #0e0e0e;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
   margin: 0;
   padding: 0;
 }
 
-.container {
+.main-container {
   max-width: 700px;
   margin: auto;
-  padding: 20px;
+  padding: 30px 15px;
   text-align: center;
 }
 
-input[type="text"] {
-  width: 90%;
+.title {
+  font-size: 2.2rem;
+  color: #00ffe1;
+  margin-bottom: 30px;
+}
+
+.search-area {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.search-area input {
+  width: 70%;
   padding: 12px;
   font-size: 16px;
-  margin-bottom: 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
 }
 
-.buttons button {
-  background-color: #1e1e1e;
-  color: white;
-  border: 1px solid #444;
-  padding: 10px 16px;
-  margin: 5px;
-  border-radius: 6px;
+.search-area button {
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  background-color: #00ffe1;
+  color: black;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.search-area button:hover {
+  background-color: #00bfa6;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tool-card {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  padding: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+  background: #00ffe122;
+  border-color: #00ffe1;
 }
 
 .results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  background: #161616;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 100px;
 }
